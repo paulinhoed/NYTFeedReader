@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/cardview_shadow_start_color"
+    tools:context="com.testvuxx.nytfeedreader.homeScreen.HomeActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="@string/app_name"
+        android:textSize="24sp"
+        android:background="@color/cardview_dark_background"
+        android:textColor="@color/cardview_light_background"
+        android:gravity="center" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/cardview_shadow_start_color"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prompt"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="140dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentEnd="true"
+            app:layout_constraintLeft_toLeftOf="@+id/spSection"
+            android:textColor="@color/cardview_light_background"
+             />
+
+        <Spinner
+            android:background="@color/cardview_light_background"
+            android:id="@+id/spSection"
+            android:entries="@array/section_list"
+            android:prompt="@string/prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentEnd="true"/>
+
+        <Button
+            android:id="@+id/btn_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:drawableStart="@drawable/ic_loop_white"
+            android:padding="5dp"
+            android:text="@string/refresh"
+            android:background="#000000"
+            android:textColor="#FFFF"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:focusable="true"
+            android:gravity="center_vertical"/>
+
+        <Button
+            android:id="@+id/btn_clear_reads"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:drawableStart="@drawable/ic_resetall_white"
+            android:padding="5dp"
+            android:text="@string/clear_list"
+            android:background="#000000"
+            android:textColor="#FFFF"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"
+            android:focusable="true"
+            android:gravity="center_vertical"/>
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listReports"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+</LinearLayout>
