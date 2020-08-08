@@ -20,76 +20,99 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="80dp"
         android:background="@color/cardview_shadow_start_color"
+        android:layout_gravity="center_vertical"
         android:layout_marginBottom="10dp">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <TableLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/prompt"
-            android:textSize="16sp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="140dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:layout_alignParentEnd="true"
-            app:layout_constraintLeft_toLeftOf="@+id/spSection"
-            android:textColor="@color/cardview_light_background"
-             />
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp">
 
-        <Spinner
-            android:background="@color/cardview_light_background"
-            android:id="@+id/spSection"
-            android:entries="@array/section_list"
-            android:prompt="@string/prompt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:layout_alignParentEnd="true"/>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingTop="5dp">
 
-        <Button
-            android:id="@+id/btn_refresh"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="10dp"
-            android:clickable="true"
-            android:drawableStart="@drawable/ic_loop_white"
-            android:padding="5dp"
-            android:text="@string/refresh"
-            android:background="#000000"
-            android:textColor="#FFFF"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            android:layout_alignParentStart="true"
-            android:focusable="true"
-            android:gravity="center_vertical"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt"
+                    android:textSize="16sp"
+                    android:textColor="@color/cardview_light_background"/>
 
-        <Button
-            android:id="@+id/btn_clear_reads"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="10dp"
-            android:clickable="true"
-            android:drawableStart="@drawable/ic_resetall_white"
-            android:padding="5dp"
-            android:text="@string/clear_list"
-            android:background="#000000"
-            android:textColor="#FFFF"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            android:layout_alignParentEnd="true"
-            android:focusable="true"
-            android:gravity="center_vertical"/>
+                <Spinner
+                    android:background="@color/cardview_light_background"
+                    android:id="@+id/spSection"
+                    android:entries="@array/section_list"
+                    android:prompt="@string/prompt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:paddingTop="3dp"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:paddingBottom="7dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_refresh"
+                            android:layout_weight="1"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom"
+                            android:background="#000000"
+                            android:drawableStart="@drawable/ic_loop_white"
+                            android:padding="2dp"
+                            android:gravity="center"
+                            android:text="@string/refresh"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btn_clear_reads"
+                            android:layout_weight="1"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="5dp"
+                            android:background="#000000"
+                            android:drawableStart="@drawable/ic_resetall_white"
+                            android:padding="2dp"
+                            android:gravity="center"
+                            android:text="@string/clear_list"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
     </RelativeLayout>
 
     <ListView

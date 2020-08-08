@@ -176,6 +176,7 @@ public class HomeActivity extends AppCompatActivity
                     .load(stringToUrl(listOfReports.get(position).thumbnail))
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
                     .apply(RequestOptions.circleCropTransform())
+                    .placeholder(R.drawable.ic_launcher_background)
                     .into(viewHolder.thumbnailImageView);
             return convertView;
         }
